@@ -188,7 +188,7 @@ namespace K {
           bidStatus = mQuoteState::DepletedFunds;
           rawQuote->bid.clear();
         }
-        if (rawQuote->ask.size > ((PG*)wallet)->position._baseTotal) {
+        if (rawQuote->ask.size >= ((PG*)wallet)->position._baseTotal) {
           askStatus = mQuoteState::DepletedFunds;
           rawQuote->ask.clear();
         }
